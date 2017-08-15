@@ -1,17 +1,21 @@
-def dif(nome, sex):
+try:
 
-	if sex.lower() == "masculino":
+	b = int(input("Forneça dois valores inteiros para 'b' e 'n', respectivamente (com b >= 2 e n > 1): "))
+	n = int(input())
 
-		return "\nIlmo. Sr. %s [...]" % nome
+	while b < 2 or n <= 1:
 
-	elif sex.lower() == "feminino":
+		try:
 
-		return "\nIlmo. Sra. %s [...]" % nome
+			b = int(input("Forneça dois valores inteiros para 'b' e 'n', respectivamente (com b >= 2 e n > 1): "))
+			n = int(input())
 
-	else:
+		except:
 
-		return "O sexo não pôde ser identificado."
+			print("Não foram fornecidos valores inteiros.")
 
-nome, sex = input("Nome: "), input("Sexo: ")
+	print("'b' elevado a 'n' é %d." % pow(b, n))
 
-print(dif(nome, sexo))
+except:
+
+print("Não foram fornecidos valores inteiros.")
